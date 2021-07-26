@@ -16,16 +16,6 @@ git clone https://github.com/nickstenning/dokku-webhooks.git /var/lib/dokku/plug
 git reset --hard c5ade98a8e188ccd9f1f544e3ffc8c1d5d0ea4e0
 ```
 
-Next, move the `receive-app` hook out of the way:
-
-```shell
-mv /var/lib/dokku/plugins/git/receive-app /var/lib/dokku/plugins/git/receive-app.bak
-```
-
-The second step is necessary because this plugin replaces the default
-`receive-app` hook. If you don't use the default git `receive-app` hook then you
-will need to modify the last lines of `receive-app` in this plugin accordingly.
-
 ## Configuration
 
 Add a webhook:
